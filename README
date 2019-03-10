@@ -1,0 +1,16 @@
+
+To setup your docker image and project directories run `./startproject.sh` . This will create ~/code directory.
+
+Project Directories:
+
+~/code/web_portal
+~/code/mysql
+~/code/deltas
+
+To start your project's services run `./up.sh` .
+
+To propagate changes you make to your Django Models into your Database schema run `./dbmigrate.sh` . When you first start the service, you have to run this script.
+
+To get your MySQL root password run `./dbroot.sh`
+
+
