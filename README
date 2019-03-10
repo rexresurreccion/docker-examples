@@ -1,5 +1,14 @@
+This is an example development setup using Docker services.
 
-To setup your docker image and project directories run `./startproject.sh` . This will create ~/code directory.
+Main Components:
+
+Django - High-level Python Web framework that encourages rapid development and clean, pragmatic design. Please visit https://www.djangoproject.com/ to learn more about the framework.
+
+MySQL - MySQL is a widely used, open-source relational database management system (RDBMS). Please visit https://www.mysql.com/ to learn more about the database.
+
+CentOS - CentOS is a Linux distribution that provides a free, enterprise-class, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux. Please visit https://www.centos.org/ to learn more about the operating system.
+
+To setup your docker image and project directories run `./startproject.sh`. This will create a Docker image called "web_portal" and your project's directory located in "~/code".
 
 Project Directories:
 
@@ -7,10 +16,10 @@ Project Directories:
 ~/code/mysql
 ~/code/deltas
 
-To start your project's services run `./up.sh` .
+To start your project's services run `./up.sh` . This will run two containers for yor database mysql-django_web_db_1 and website mysql-django_web_portal_1.
 
-To propagate changes you make to your Django Models into your Database schema run `./dbmigrate.sh` . When you first start the service, you have to run this script.
+To propagate changes you make to your Django Models into your Database schema run `./dbmigrate.sh` . When you first start the service, you have to run this script to
+migrate your initial database tables.
 
 To get your MySQL root password run `./dbroot.sh`
-
 
